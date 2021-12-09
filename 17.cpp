@@ -51,9 +51,9 @@ void TorolVektor(vector<int*> vec){                         				// kitöröljük
 
 int main(){
     //1. Allocate an array of ten ints on the free store using new.
-    int* alloc = new int[10];                         					//lefoglalunk 10 intméretü memóriát 
+    int* alloc = new int[10];                         					//lefoglal 10 int méretü memóriát 
     //2. Print the values of the ten ints to cout.
-    cout << "Feladat 2." << endl;                       				//végigmegyünk a tömbön és kiíratjuk az értékeit
+    cout << "Feladat 2." << endl;                       				//végigmegy a tömbön és kiírata az értékeit
     for(int i = 0; i<10; ++i){
         cout << alloc[i] << endl;
     }
@@ -61,7 +61,7 @@ int main(){
     delete[] alloc;                                     				//felszabadítja a memóriát amit ezelőtt lefoglaltunk
     //4. Write a function print_array10(ostream& os, int* a) that prints out the
     //values of a (assumed to have ten elements) to os.
-    cout << "Feladat 4." << endl;                       				//meghívjuk a fent megírt függvényt
+    cout << "Feladat 4." << endl;                       				//meghívja a fent megírt függvényt
     print_array10(cout, alloc);
     //5. Allocate an array of ten ints on the free store; initialize it with the values
     //100, 101, 102, etc.; and print out its values.
@@ -71,18 +71,18 @@ int main(){
     delete[] alloc2;
     //6. 
     cout << "Feladat 6." << endl;
-    int* alloc3 = new int[11]{100,101,102,103,104,105,106,107,108,109,110};             // itt egy 11-méretü tömb létrehozva számok deklarálva
+    int* alloc3 = new int[11]{100,101,102,103,104,105,106,107,108,109,110};             //itt egy 11-méretü tömb létrehozva számok deklarálva
     print_array10(cout, alloc3);                                                    	//kiíratás
     delete[] alloc3;                                                                	//memória afelszabadítás
     //8. Allocate an array of 20 ints on the free store; initialize it with the values
     //100, 101, 102, etc.; and print out its values.
     cout << "Feladat 8." << endl;                                           
-    int* allocFor20 = DynamicArray(20);                                 		//létrehozzuk az adott méretű tömbünket
-    print_array(cout,allocFor20,20);                                    		//kiíratjuk a tömbünk elmeit
+    int* allocFor20 = DynamicArray(20);                                 		//20-as méretű tömböt kreálunk
+    print_array(cout,allocFor20,20);                                    		//kiírja a tömbünk elmeit
     delete[] allocFor20;                                                
     //10. Do 5, 6, and 8 using a vector instead of an array and a print_vector() instead of print_array()
     cout << "Feladat 10. - 10" << endl;
-    vector<int*> vectorFor10 = DynamicVector(20);              		 		//megadjunk a vektorunk méretét és elemeinek számát
+    vector<int*> vectorFor10 = DynamicVector(20);              		 		//megadja a vektorunk méretét és elemeinek számát
     print_vector(vectorFor10);                      					//kiírja a vektorunk tartalmát
     TorolVektor(vectorFor10);
     cout << "Feladat 10. - 11" << endl;
